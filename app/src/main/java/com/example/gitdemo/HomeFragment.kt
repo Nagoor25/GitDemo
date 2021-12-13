@@ -3,6 +3,7 @@ package com.example.gitdemo
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -14,8 +15,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
         login_btn.setOnClickListener {
         //    findNavController().navigate(HomeFra)
-           findNavController().navigate(R.id.action_home4_to_loginFragment)
+           findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
             Log.v("Git coomit ","LOG")
+            Toast.makeText(activity,"Login Clicked",Toast.LENGTH_LONG).show()
 
         }
     }
