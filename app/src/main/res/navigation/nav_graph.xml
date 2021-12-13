@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/home4">
 
     <fragment
         android:id="@+id/home4"
-        android:name="com.example.gitdemo.Home"
+        android:name="com.example.gitdemo.HomeFragment"
         android:label="activity_home"
-        tools:layout="@layout/activity_home" >
+        tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_home4_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -18,5 +18,9 @@
         android:id="@+id/loginFragment"
         android:name="com.example.gitdemo.ui.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_home4"
+            app:destination="@id/home4" />
+    </fragment>
 </navigation>
